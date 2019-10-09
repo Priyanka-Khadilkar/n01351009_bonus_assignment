@@ -82,6 +82,10 @@ namespace n01351009_bonus_assignment
             {
                 e.IsValid = false;
             }
+            else
+            {
+                e.IsValid = true;
+            }
             
         }
     }
