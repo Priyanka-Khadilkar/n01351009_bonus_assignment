@@ -30,22 +30,22 @@ namespace n01351009_bonus_assignment
                     if (Number_Of_Tickets <= 50)
                     {
                         //If number of tickets under or equal 50, it should be bundled individually
-                        PrintRaffleBundleOutput(Number_Of_Tickets, 1);
+                        Print_RaffleBundle_Output(Number_Of_Tickets, 1);
                     }
                     else if (Number_Of_Tickets >= 51 && Number_Of_Tickets <= 150)
                     {
                         //If number of tickets in between 51(including) and 150(including) , it should be bundled in set of two
-                        PrintRaffleBundleOutput(Number_Of_Tickets, 2);
+                        Print_RaffleBundle_Output(Number_Of_Tickets, 2);
                     }
                     else if (Number_Of_Tickets >= 151 && Number_Of_Tickets <= 300)
                     {
                         //If number of tickets in between 151(including) and 300(including) , it should be bundled in set of three
-                        PrintRaffleBundleOutput(Number_Of_Tickets, 3);
+                        Print_RaffleBundle_Output(Number_Of_Tickets, 3);
                     }
                     else
                     {
                         //If number of tickets more than 300 , it should be bundled in set of five
-                        PrintRaffleBundleOutput(Number_Of_Tickets, 5);
+                        Print_RaffleBundle_Output(Number_Of_Tickets, 5);
                     }
                 }
 
@@ -57,7 +57,7 @@ namespace n01351009_bonus_assignment
         /// </summary>
         /// <param name="Number_of_Tickets">Number of tickets</param>
         /// <param name="Number_of_Bundle">Number of bundle</param>
-        public void PrintRaffleBundleOutput(int Number_of_Tickets, int Number_of_Bundle)
+        public void Print_RaffleBundle_Output(int Number_of_Tickets, int Number_of_Bundle)
         {
             for (int i = Number_of_Bundle; i <= Number_of_Tickets + Number_of_Bundle; i = i + Number_of_Bundle)
             {
