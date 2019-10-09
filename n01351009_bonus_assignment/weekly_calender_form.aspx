@@ -4,7 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Weekly Calender</title>
+    <link href="Content/Site.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -12,8 +13,8 @@
             <h1>Weekly Calender</h1>
             <section>
                 <h2>Select your weekly work/study day(s):</h2>
-                <asp:CheckBoxList ID="weekly_schedule_days" runat="server">
-                    <asp:ListItem Value="7">Monday</asp:ListItem>
+                <asp:CheckBoxList ID="weekly_schedule_days" runat="server" CausesValidation="True">
+                    <asp:ListItem Value="0">Monday</asp:ListItem>
                     <asp:ListItem Value="1">Tuesday</asp:ListItem>
                     <asp:ListItem Value="2">Wednesday</asp:ListItem>
                     <asp:ListItem Value="3">Thursday</asp:ListItem>

@@ -4,7 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Coordinate</title>
+    <link href="Content/Site.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -12,14 +13,14 @@
         <section>
             <h2>X-axis value :</h2>
             <asp:TextBox ID="x_axis_value" type="number" runat="server"></asp:TextBox>
-            <asp:RequiredFieldValidator runat="server" ControlToValidate="x_axis_value" ErrorMessage="Please enter X-axis value"></asp:RequiredFieldValidator>
-            <asp:CompareValidator runat="server" ControlToValidate="x_axis_value" Operator="NotEqual" ValueToCompare="0" ErrorMessage="Please enter non-zero x-axis value"></asp:CompareValidator>
+            <asp:RequiredFieldValidator runat="server" ForeColor="Red" ControlToValidate="x_axis_value" ErrorMessage="Please enter X-axis value"></asp:RequiredFieldValidator>
+            <asp:CustomValidator runat="server" ForeColor="Red" ControlToValidate="x_axis_value" OnServerValidate="Validate_Axis_Value" ErrorMessage="Please enter valid number"></asp:CustomValidator>
         </section>
         <section>
             <h2>Y-axis value :</h2>
             <asp:TextBox ID="y_axis_value" type="number" runat="server"></asp:TextBox>
-            <asp:RequiredFieldValidator runat="server" ControlToValidate="y_axis_value" ErrorMessage="Please enter Y-axis value"></asp:RequiredFieldValidator>
-            <asp:CompareValidator runat="server" ControlToValidate="y_axis_value" Operator="NotEqual" ValueToCompare="0" ErrorMessage="Please enter non-zero y-axis value"></asp:CompareValidator>
+            <asp:RequiredFieldValidator runat="server" ForeColor="Red" ControlToValidate="y_axis_value" OnServerValidate="Validate_Number" ErrorMessage="Please enter Y-axis value"></asp:RequiredFieldValidator>
+            <asp:CustomValidator runat="server" ForeColor="Red" ControlToValidate="y_axis_value" OnServerValidate="Validate_Axis_Value" ErrorMessage="Please enter valid number"></asp:CustomValidator>
         </section>
         <section>
             <div runat="server" id="quadrant_summary"></div>
